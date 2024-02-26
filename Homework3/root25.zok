@@ -1,0 +1,6 @@
+def main() {
+    field a = 5;
+    field b = 25;
+    assert(a * a == b);
+    return;
+}
