@@ -1,0 +1,65 @@
+cactussediento@Olivetti-2:~/ZkBootcamp/Homework8$ npm install -g zkapp-cli | tee output.txt
+
+added 8 packages, removed 6 packages, and changed 167 packages in 1m
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+cactussediento@Olivetti-2:~/ZkBootcamp/Homework8$ zk example
+✔ Choose an example · sudoku
+✔ Fetch project template
+✔ Extract example
+⠋ Initialize Git repo...warning: templates not found in 'usr/share/git-core/templates'
+✔ Initialize Git repo
+✔ NPM install
+✔ Set project name
+✔ Git init commit
+
+Success!
+
+Next steps:
+  cd sudoku
+  git remote add origin <your-repo-url>
+  git push -u origin main
+
+To run the example:
+  cd sudoku
+  npm run test
+  npm run build
+  npm run start
+
+cactussediento@Olivetti-2:~/ZkBootcamp/Homework8$ cd sudoku
+cactussediento@Olivetti-2:~/ZkBootcamp/Homework8/sudoku$ npm run test
+
+> sudoku@0.1.0 test
+> node --experimental-vm-modules node_modules/jest/bin/jest.js
+
+(node:120558) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ PASS  src/sudoku.test.ts (20.597 s)
+  sudoku
+    ✓ accepts a correct solution (11816 ms)
+    ✓ rejects an incorrect solution (2235 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        20.736 s
+Ran all test suites.
+cactussediento@Olivetti-2:~/ZkBootcamp/Homework8/sudoku$ npm run build
+
+> sudoku@0.1.0 build
+> tsc
+
+cactussediento@Olivetti-2:~/ZkBootcamp/Homework8/sudoku$ npm run start
+
+> sudoku@0.1.0 start
+> node build/src/run.js
+
+Deploying and initializing Sudoku...
+Is the sudoku solved? false
+Submitting wrong solution...
+There was an error submitting the solution, as expected
+Is the sudoku solved? false
+Submitting solution...
+Is the sudoku solved? true
